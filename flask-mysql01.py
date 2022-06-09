@@ -131,20 +131,16 @@ def register():
 
 @app.route('/order', methods=['GET', 'POST'])
 def order():
-    if request.method == "POST":
-        details = request.form
-        momo_name = details['momo_name']
-        price = details['price']
-        #file = request.files.get('file')
-        momo_pic = details['momo_pic']
-        #momo_pic = secure_filename(file.filename)
-        #momo_pic = read_file(file)
-        cursor = db.cursor()
-        cursor.execute("INSERT INTO momo(momo_name, price, momo_pic) VALUES (%s, %s, %s)", (momo_name, price, momo_pic))
-        db.commit()
-        #cur.close()
-        return ' Order Successful '
-    return render_template('order.html')
+    cursor = db.cursor()
+    sql = "SELECT * FROM momo"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #for i in results:
+    #    print(i)
+    #db.close()
+    #return results
+    return render_template('order.html', results=results)
+    #return render_template('order.html')
 @app.route('/')
 def index():
     return render_template('index.html')

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" ></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" ></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script>
+            function add_to_total(){
+                document.getElementById("subt").value=2000;
+                }
+        </script>
     </head>
 <body>
     <nav class="nav">
@@ -21,18 +23,31 @@
     <center>
         <section class="section1">
         <div class="div1">
-            <table border="0">
-                <tr> <td colspan="2" align="center"><h1>Today's Speciality</h1></td></tr>
-                <tr>
-                    <td><img src="/static/spl1.png" height="170" width="230"></td>
-                    <td><img src="/static/spl2.png" height="170" width="230"></td>
-                </tr>
-                <tr> <td colspan="2" align="center"><h1>Everyday Speciality</h1></td></tr>
-                <tr>
-                    <td><img src="/static/dspl1.png" height="170" width="230"></td>
-                    <td><img src="/static/dspl2.png" height="170" width="230"></td>
-                </tr>
-          </table>
+    <h1>Place Order Here</h1>
+    <table border="1" id="table1">
+        <tr>
+            <td>Momo Name</td>
+            <td>Momo Price</td>
+            <td>Quantity</td>
+            <td>Sub Total</td>
+        </tr>
+        <form name="f1">
+    {% for row in results %}
+          <tr>
+             <td>{{ row[1] }}</td>
+             <td><input type="text" name="price" value="{{ row[2] }}"></td>
+             <td><input type="text" name="quantity" onchange= "add_to_total()"></td>
+             <td><input type="text" id="subt"></td>
+             <td><input type="button" id="addb"></td>
+          </tr>
+    {% endfor %}
+        </form>
+  </table>
+  <span id="val"></span>
+
+  
+
+  
         </div>
         </center>
         </section>
