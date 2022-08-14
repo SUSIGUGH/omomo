@@ -1,0 +1,22 @@
+npx create-react-app omomo
+cd omomo
+npm install react-bootstrap bootstrap@4.6.0
+npm install react-icons
+npm install react-router-dom
+npm install axios
+Add below in index.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+git clone "<address>"
+git config user.email "<email registered in git>"
+git config user.email
+git config user.name "<registered git username>"
+git config user.name
+git pull origin <brnachname>
+git checkout -b <branchname>
+git add "<filename>"
+git add .
+git add <foldername>
+git commit -a -m "Message and Comment"
+git push -u origin main

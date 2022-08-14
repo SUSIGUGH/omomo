@@ -1,0 +1,7 @@
+const Users = [{
+    userid: 1,
+    username: "test",
+    userpassword: "test",
+
+}]
+export default Users;
