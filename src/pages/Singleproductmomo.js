@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap'
 import { CartState } from '../context/Context'
 import Rating from './Rating'
 
-const Singleproduct = ({prod}) => {
+const Singleproductmomo = ({prod}) => {
     const { state: {cart },dispatch,} = CartState();
     return (
        <div className='products'>
@@ -50,7 +50,7 @@ const Singleproduct = ({prod}) => {
     )
 }
 
-export default Singleproduct
+export default Singleproductmomo
 
 
 

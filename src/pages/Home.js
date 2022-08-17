@@ -1,7 +1,7 @@
 import React from 'react'
 import { CartState } from '../context/Context'
 import Filter from './Filter';
-import Singleproduct from './Singleproduct';
+import Singleproductmomo from './Singleproductmomo';
 import './Styles.css'
 
 function Home() {
@@ -38,7 +38,7 @@ productState: {sort, byStock, byFastDelivery, byRating, searchQuery,}} = CartSta
       <div className='productContainer'>
         {
           transformProducts().map((prod) => {
-            return <Singleproduct prod={prod} key={prod.id} />
+            return <Singleproductmomo prod={prod} key={prod.id} />
           })
         }
       </div>

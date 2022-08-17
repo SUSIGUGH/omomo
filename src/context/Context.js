@@ -5,6 +5,8 @@ import momo1 from '../momos/momo1.png'
 import momo2 from '../momos/momo2.png'
 import momo3 from '../momos/momo3.png'
 import momo4 from '../momos/momo4.png'
+import cake1 from '../cakes/cake1.jpg'
+import cake2 from '../cakes/cake2.jpg'
 const Cart = createContext();
 
 
@@ -45,6 +47,26 @@ const Context = ({ children }) => {
             name: "Fried Special Momo",
             price: "125",
             image: momo4,
+            inStock: 5,
+            fastDelivery: true,
+            ratings: 2,
+
+        },
+        {
+            id: 5,
+            name: "Strawberry Cake 500G",
+            price: "750",
+            image: cake1,
+            inStock: 5,
+            fastDelivery: true,
+            ratings: 2,
+
+        },
+        {
+            id: 6,
+            name: "Blueberry Cake 500G",
+            price: "750",
+            image: cake2,
             inStock: 5,
             fastDelivery: true,
             ratings: 2,
